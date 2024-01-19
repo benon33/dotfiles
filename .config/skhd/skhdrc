@@ -1,0 +1,45 @@
+# applications
+
+# focus window within space
+ctrl - h : yabai -m window --focus west
+ctrl - j : yabai -m window --focus south
+ctrl - l : yabai -m window --focus east
+ctrl - k : yabai -m window --focus north
+
+# move across monitor
+ctrl + shift - h : yabai -m display --focus west
+ctrl + shift - j : yabai -m display --focus south
+ctrl + shift - l : yabai -m display --focus east
+ctrl + shift - k : yabai -m display --focus north
+
+
+# move curr window
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - l : yabai -m window --warp east
+ctrl + alt - k : yabai -m window --warp north
+
+# rotate clockwise
+shift + ctrl - r : yabai -m space --rotate 270
+
+# mirror y axis
+shift + ctrl - y : yabai -m space --mirror y-axis
+
+# mirror x axis
+shift + ctrl - x : yabai -m space --mirror x-axis
+
+# toggle window float
+shift + ctrl - t : yabai -m --toggle float --grid 4:4:1:1:2:2
+
+# modifying window size
+
+# maximize window
+shift + ctrl -m : yabai -m window --toggle zoom-fullscreen
+
+# balance all tree of windows to occupy same size
+shift + ctrl -e : yabai -m space --balance
+
+# rebalance windows to og
+# alt is opt
+shift + alt -o : yabai -m space -- balance
+
