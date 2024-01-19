@@ -10,6 +10,7 @@ alias skhdworkpls=PATH=/opt/homebrew/bin:$PATH; skhd &>/dev/null &
 
 alias ggraph="git log --all --decorate --oneline --graph"
 
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
