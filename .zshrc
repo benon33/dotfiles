@@ -1,18 +1,3 @@
-# vim to nvim
-alias vim=nvim
-alias vi=nvim
-
-alias python=python3
-alias pip=pip3
-
-# if yabai isn't working
-alias skhdworkpls=PATH=/opt/homebrew/bin:$PATH; skhd &>/dev/null &
-
-alias ggraph="git log --all --decorate --oneline --graph"
-
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -124,3 +109,65 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+# pyenv
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# poetry
+export PATH=$PATH:$HOME/.poetry/bin
+
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
+
+# git branch auto complete
+
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+  . /opt/local/etc/profile.d/bash_completion.sh
+fi
+
+export GH_PAT=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
+
+
+# Auto complete history
+autoload -U compinit
+compinit
+
+# history
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+HISTFILE=$HOME/.zhistory
+SAVEHIST=10000
+HISTSIZE=9999
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
+
+# auto complete using up down arrows
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
+# never beep
+setopt NO_BEEP
+
+
+alias vim=nvim
+alias vi=nvim
+
+alias python=python3
+alias pip=pip3
+
+# if yabai isn't working
+alias skhdworkpls=PATH=/opt/homebrew/bin:$PATH; skhd &>/dev/null &
+
+alias ggraph="git log --all --decorate --oneline --graph"
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+
+
