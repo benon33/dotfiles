@@ -132,9 +132,6 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
   . /opt/local/etc/profile.d/bash_completion.sh
 fi
 
-export GH_PAT=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
-
-
 # Auto complete history
 autoload -U compinit
 compinit
@@ -168,6 +165,3 @@ alias skhdworkpls=PATH=/opt/homebrew/bin:$PATH; skhd &>/dev/null &
 alias ggraph="git log --all --decorate --oneline --graph"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-
-
