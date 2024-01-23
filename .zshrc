@@ -164,11 +164,5 @@ alias skhdworkpls=PATH=/opt/homebrew/bin:$PATH; skhd &>/dev/null &
 
 alias ggraph="git log --all --decorate --oneline --graph"
 
-<<<<<<< Updated upstream
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-=======
 alias df='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
-
-
->>>>>>> Stashed changes
